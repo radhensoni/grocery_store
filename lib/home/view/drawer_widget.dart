@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:vocal_for_local/terms_and_conditions/view/terms_and_conditions.dart';
 
+import '../../videos/view/video_screen.dart';
+
 Drawer customDrawer(BuildContext context) {
   return Drawer(
     backgroundColor: Colors.white,
@@ -67,6 +69,17 @@ Drawer customDrawer(BuildContext context) {
             const ListTile(
               leading: Icon(Icons.info),
               title: Text("About us"),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const VideoScreen(),
+                    ));
+              },
+              leading: Icon(Icons.video_collection),
+              title: Text("videos"),
             )
           ],
         )
