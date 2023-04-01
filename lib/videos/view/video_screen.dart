@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
+import 'package:vocal_for_local/auth/controller/auth_controller.dart';
 import 'package:vocal_for_local/videos/view/video_detail_screen.dart';
 import 'package:logger/logger.dart';
 
@@ -28,6 +29,25 @@ class _VideoScreenState extends State<VideoScreen> {
         .get();
     currentUserMap = currentUser!.data() as Map<String, dynamic>;
     authVideoListId = currentUserMap!["auth_videos_id"];
+    DateTime currentDate = DateTime.now();
+    List tempVideoList = [];
+    for (int i = 0; i < authVideoListId!.length; i++) {
+      Timestamp videoDate = authVideoListId![i]["duration"];
+      DateTime compareDate =
+          DateTime.fromMillisecondsSinceEpoch(videoDate.millisecondsSinceEpoch);
+      bool isBefore = currentDate.isBefore(compareDate);
+      if (isBefore) {
+        // remove the video id
+        tempVideoList.add(authVideoListId![i]);
+      }
+    }
+    if (authVideoListId!.length > tempVideoList.length) {
+      authVideoListId = tempVideoList;
+      FirebaseFirestore.instance
+          .collection("users")
+          .doc(FirebaseAuth.instance.currentUser!.uid)
+          .update({"auth_videos_id": authVideoListId});
+    }
     context.loaderOverlay.hide();
     setState(() {});
   }
@@ -78,7 +98,11 @@ class _VideoScreenState extends State<VideoScreen> {
     Logger().d(
       "SUCCESS: ${response.paymentId}",
     );
-    authVideoListId!.add(selectedVideoData["id"]);
+    // DateTime videoExpiryDate = DateTime.now().add(Duration(days: selectedVideoData["video_duration_days"]));
+    DateTime videoExpiryDate = DateTime.now()
+        .subtract(Duration(days: selectedVideoData["video_duration_days"]));
+    authVideoListId!
+        .add({"id": selectedVideoData["id"], "duration": videoExpiryDate});
     setState(() {});
     FirebaseFirestore.instance
         .collection("users")
@@ -132,7 +156,7 @@ class _VideoScreenState extends State<VideoScreen> {
         title: const Text("video"),
       ),
       body: context.loaderOverlay.visible
-          ? Center(child: CircularProgressIndicator())
+          ? const Center(child: CircularProgressIndicator())
           : StreamBuilder(
               stream:
                   FirebaseFirestore.instance.collection('videos').snapshots(),
@@ -150,9 +174,9 @@ class _VideoScreenState extends State<VideoScreen> {
                       snapshot.data!.docs.map((DocumentSnapshot document) {
                     Map<String, dynamic> data =
                         document.data()! as Map<String, dynamic>;
+                    bool isVideoAvailable = authVideoListId!.any((element) => element.values.contains(data["id"]) as bool);
                     return ListTile(
                       onTap: () async {
-                        //implement auth video logic
                         if (!authVideoListId!.contains(data["id"])) {
                           showDialog<void>(
                             context: context,
@@ -160,7 +184,8 @@ class _VideoScreenState extends State<VideoScreen> {
                             builder: (BuildContext context) {
                               return AlertDialog(
                                 title: const Text('Purchase video'),
-                                content: Text("${data["title"]}is paid video to view the video you need to purchase it, Do you want to Purchase?"),
+                                content: Text(
+                                    "${data["title"]}is paid video to view the video you need to purchase it, Do you want to Purchase?"),
                                 actions: <Widget>[
                                   TextButton(
                                     child: const Text('No'),
@@ -194,7 +219,7 @@ class _VideoScreenState extends State<VideoScreen> {
                         }
                       },
                       title: Text(data["title"]),
-                      trailing: authVideoListId!.contains(data["id"])
+                      trailing: isVideoAvailable
                           ? const Icon(Icons.lock_open)
                           : const Icon(Icons.lock),
                     );
