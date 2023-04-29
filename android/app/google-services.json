@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "509807689913",
+    "project_id": "radhen-task",
+    "storage_bucket": "radhen-task.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509807689913:android:a6ea0e9ecb8a3c85901b68",
+        "android_client_info": {
+          "package_name": "com.example.empereal_task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509807689913-1240if6o8ilu7i4arb8qvctoi19o518n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.empereal_task",
+            "certificate_hash": "eb6984db2369dd3ef36e26727ecc8906c65c30fa"
+          }
+        },
+        {
+          "client_id": "509807689913-gf39hmf8g78ed2ta1tguvkbkho5a9g1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJZCLCVL9C0bEs9msMwrFYZ3_I8ewDzMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509807689913-gf39hmf8g78ed2ta1tguvkbkho5a9g1t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

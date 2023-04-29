@@ -1,10 +1,14 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
 
 import '../../utils/colors.dart';
 import '../../utils/size_constants.dart';
 
 class HomePageDisplayItem extends StatelessWidget {
-  HomePageDisplayItem({
+  const HomePageDisplayItem({
     Key? key,
     required this.productImagePath,
     required this.productName,
@@ -13,7 +17,8 @@ class HomePageDisplayItem extends StatelessWidget {
   }) : super(key: key);
 
   final String productImagePath, productName, productPrice;
-  Function onTap;
+  final Function onTap;
+
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -30,11 +35,12 @@ class HomePageDisplayItem extends StatelessWidget {
               children: [
                 ClipRRect(
                   borderRadius: const BorderRadius.all(Radius.circular(20)),
-                  child: Image.network(
-                    productImagePath,
-                    height: MediaQuery.of(context).size.height * 0.15,
-                    width: MediaQuery.of(context).size.width * 0.25,
-                    fit: BoxFit.fill,
+                  child: CachedNetworkImage(
+                    imageUrl: productImagePath,
+                    placeholder: (context, url) =>
+                        const CircularProgressIndicator(),
+                    errorWidget: (context, url, error) =>
+                        const Icon(Icons.error),
                   ),
                 ),
                 const SizedBox(
@@ -67,7 +73,7 @@ class HomePageDisplayItem extends StatelessWidget {
                         child: ColoredBox(
                           color: ThemeColors.primaryColor,
                           child: IconButton(
-                            onPressed: (){
+                            onPressed: () {
                               return onTap();
                             },
                             icon: const Icon(Icons.add),

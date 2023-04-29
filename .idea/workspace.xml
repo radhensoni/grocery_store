@@ -1,11 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7927ca5-a989-4efc-9f81-07843dce3e49" name="Changes" comment="video purchase">
+      <change afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/empereal_task/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/product_not_found.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/cart/controller/cart_controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/dashboard/controller/dashboard_controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/home/controller/homepage_product_controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/home/view/homepage_display_products_widget.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/liked_products/view/liked_products_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/orders/view/order_details_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/orders/view/order_list_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/product_detail/view/product_detail_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/search/view/search_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/custom_dialoge.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/custom_function.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/firebase_main.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/videos/view/video_description_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/videos/view/videos_list_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/grocery_store.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/grocery_store.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/grocery_store/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/profile/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/auth/controller/auth_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/auth/controller/auth_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/auth/view/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/auth/view/login_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cart/view/cart_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/cart/view/cart_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dashboard/view/dashboard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dashboard/view/dashboard.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/home/view/drawer_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home/view/drawer_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/home/view/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home/view/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/home/view/homepage_display_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home/view/homepage_display_item.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/settings/view/setting_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/settings/view/setting_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/firebase_consts.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/firebase_consts.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/generated_plugins.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/widget_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,24 +79,35 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MsiKGhJCFoIeFXGVovi7pPmFF0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images" />
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="dev.polek.adbwifi.settings.AdbWifiConfigurable" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\flutter_projects\git_grocery\grocery_store\grocery_store\assets\images" />
+      <recent name="D:\flutter_projects\git_grocery\grocery_store\grocery_store\android\app" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -74,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679171682175</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="video purchase">
+      <created>1680321695934</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680321695934</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,6 +161,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init commit" />
     <MESSAGE value="video purchase" />
     <option name="LAST_COMMIT_MESSAGE" value="video purchase" />

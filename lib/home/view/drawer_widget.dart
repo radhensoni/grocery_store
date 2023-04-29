@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vocal_for_local/terms_and_conditions/view/terms_and_conditions.dart';
-
-import '../../videos/view/video_screen.dart';
+import 'package:vocal_for_local/videos/view/videos_list_screen.dart';
 
 Drawer customDrawer(BuildContext context) {
   return Drawer(
@@ -56,6 +55,15 @@ Drawer customDrawer(BuildContext context) {
             ListTile(
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const VideosListScreen(),
+                ));
+              },
+              leading: const Icon(Icons.video_collection),
+              title: const Text("Videos"),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const TermsAndCondition(),
                 ));
               },
@@ -69,17 +77,6 @@ Drawer customDrawer(BuildContext context) {
             const ListTile(
               leading: Icon(Icons.info),
               title: Text("About us"),
-            ),
-            ListTile(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const VideoScreen(),
-                    ));
-              },
-              leading: Icon(Icons.video_collection),
-              title: Text("videos"),
             )
           ],
         )

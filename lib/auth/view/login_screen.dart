@@ -66,7 +66,16 @@ class _LoginScreenState extends State<LoginScreen> {
                           setState(() {
                             _loding = true;
                           });
-                          await signup(context);
+                          bool isLogin = false;
+                          isLogin = await signup(context);
+                          if (isLogin == true) {
+                            Shared_Preference.setBool(
+                                SharedPreferenceKeys.isLogin, true);
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Dashboard()));
+                          }
                           setState(() {
                             _loding = false;
                           });
